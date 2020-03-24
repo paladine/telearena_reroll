@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option java_package = "com.jeffreys.scripts.tareroll";
+option java_multiple_files = true;
+
+message RerollRequirements {
+  int32 knowledge = 1;
+  int32 intellect = 2;
+  int32 physique = 3;
+  int32 stamina = 4;
+  int32 agility = 5;
+  int32 charisma = 6;
+  int32 vitality = 7;
+
+  string logoff_command = 8;
+}
