@@ -118,14 +118,14 @@ public class TARerollTest {
 
   private static RerollRequirements createRerollRequirements(int... values) {
     return RerollRequirements.newBuilder()
-      .setIntellect(values[0])
-      .setKnowledge(values[1])
-      .setPhysique(values[2])
-      .setStamina(values[3])
-      .setAgility(values[4])
-      .setCharisma(values[5])
-      .setVitality(values[6])
-      .setLogoffCommand("=x")
-      .build();
+        .setIntellect(values[0])
+        .setKnowledge(values[1])
+        .setPhysique(values[2])
+        .setStamina(values[3])
+        .setAgility(values[4])
+        .setCharisma(values[5])
+        .setVitality(values[6])
+        .setLogoffCommand("=x")
+        .build();
   }
 }

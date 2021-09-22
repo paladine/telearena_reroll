@@ -18,7 +18,7 @@ public class AnsiColorParser {
     BLUE,
     MAGENTA,
     CYAN,
-    WHITE;
+    WHITE
   }
 
   public enum AnsiAttribute {
@@ -39,8 +39,8 @@ public class AnsiColorParser {
     ESCAPE,
     BRACKET,
     VALUE_ACCUM,
-    WAIT_FOR_ANSI_END;
-  };
+    WAIT_FOR_ANSI_END
+  }
 
   private static final char ASCII_ESCAPE = 0x1B;
   private static final ImmutableSet<Character> ANSI_ENDS =
@@ -75,10 +75,6 @@ public class AnsiColorParser {
         char c, AnsiColor foregroundColor, AnsiColor backgroundColor, AnsiAttribute attribute) {
       return new AutoValue_AnsiColorParser_AnsiCharacterAttribute(
           c, foregroundColor, backgroundColor, attribute);
-    }
-
-    public static AnsiCharacterAttribute getDefault() {
-      return DEFAULT_ANSI_CHARACTER_ATTRIBUTE;
     }
   }
 
@@ -116,10 +112,6 @@ public class AnsiColorParser {
                 attribute.getAttribute()));
       }
       return new AutoValue_AnsiColorParser_ParsedAnsiText(text, builder.build());
-    }
-
-    public static ParsedAnsiText create(String text) {
-      return create(text, DEFAULT_ANSI_CHARACTER_ATTRIBUTE);
     }
   }
 

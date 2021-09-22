@@ -45,8 +45,8 @@ public class TAReroll {
   private static final ImmutableMap<String, Integer> STATISTIC_TO_INDEX =
       createStatisticToIndexMap();
 
-  private final int wanted[] = new int[7];
-  private final int stats[] = new int[wanted.length];
+  private final int[] wanted = new int[7];
+  private final int[] stats = new int[wanted.length];
   private final RerollRequirements rerollRequirements;
   private final Scanner scanner;
   private final PrintWriter output;
@@ -76,7 +76,7 @@ public class TAReroll {
 
   private enum Status {
     NO_MATCH,
-    DONE;
+    DONE
   }
 
   private void fillWantedArray(RerollRequirements rerollRequirements) {
@@ -136,7 +136,7 @@ public class TAReroll {
         Arrays.stream(wanted).mapToObj(Integer::toString).collect(Collectors.joining(",")));
 
     while (reroll() != Status.DONE) {
-      ; // reroll again
+      // reroll again
     }
 
     output.printf("%s\r\n", rerollRequirements.getLogoffCommand());
